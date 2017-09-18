@@ -19,4 +19,4 @@ RUN npm install --registry=https://registry.npm.taobao.org
 EXPOSE 8360
 
 #运行命令
-CMD ["npm","start"]
+CMD ["pm2","startOrReload","pm2.json"]
