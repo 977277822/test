@@ -1,5 +1,5 @@
 #设置基础镜像,如果本地没有该镜像，会从Docker.io服务器pull镜像
-FROM node:6.2.0
+FROM 977277822/node-pm2
 ENV NODE_PATH /usr/local/lib/node_modules
 
 #创建app目录,保存我们的代码
@@ -17,7 +17,6 @@ COPY . /opt/www/wwwroot/test
 WORKDIR /opt/www/wwwroot/test
 RUN npm install --registry=https://registry.npm.taobao.org
 
-RUN npm install -g pm2 --registry=https://registry.npm.taobao.org
 
 #暴露container的端口
 EXPOSE 8360
