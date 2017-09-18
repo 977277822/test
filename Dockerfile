@@ -1,10 +1,13 @@
 #设置基础镜像,如果本地没有该镜像，会从Docker.io服务器pull镜像
 FROM node:6.2.0
+ENV NODE_PATH /usr/local/lib/node_modules
 
 #创建app目录,保存我们的代码
 RUN mkdir -p /opt/www/wwwroot/test
 #设置工作目录
 WORKDIR /opt/www/wwwroot/test
+
+
 
 #复制所有文件到 工作目录。
 COPY . /opt/www/wwwroot/test
