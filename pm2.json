@@ -2,7 +2,7 @@
   "apps": [{
     "name": "test",
     "script": "www/production.js",
-    "cwd": "/Users/Mr.Carry/Desktop/webstore_app/test",
+    "cwd": "/opt/www/wwwroot/test",
     "exec_mode": "cluster",
     "instances": 0,
     "max_memory_restart": "1G",
