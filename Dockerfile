@@ -14,6 +14,7 @@ COPY . /opt/www/wwwroot/test
 WORKDIR /opt/www/wwwroot/test
 RUN npm install --registry=https://registry.npm.taobao.org
 
+RUN npm install -g pm2 --registry=https://registry.npm.taobao.org
 
 #暴露container的端口
 EXPOSE 8360
