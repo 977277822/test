@@ -1,13 +1,10 @@
 #设置基础镜像,如果本地没有该镜像，会从Docker.io服务器pull镜像
-FROM 977277822/node-pm2
-ENV NODE_PATH /usr/local/lib/node_modules
+FROM keymetrics/pm2-docker-alpine:latest
 
 #创建app目录,保存我们的代码
 RUN mkdir -p /opt/www/wwwroot/test
 #设置工作目录
 WORKDIR /opt/www/wwwroot/test
-
-
 
 #复制所有文件到 工作目录。
 COPY . /opt/www/wwwroot/test
@@ -22,4 +19,4 @@ RUN npm install --registry=https://registry.npm.taobao.org
 EXPOSE 8360
 
 #运行命令
-CMD ["pm2","start", "pm2.json" ,"--no-daemon"]
+CMD ["pm2","start", "pm2.json"]
