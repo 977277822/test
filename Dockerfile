@@ -20,4 +20,4 @@ RUN npm run compile
 EXPOSE 8360
 
 #运行命令
-CMD ["pm2","start", "pm2.json"]
+CMD [ "pm2-docker", "start", "pm2.json" ]
